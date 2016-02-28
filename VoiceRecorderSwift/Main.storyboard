@@ -273,6 +273,16 @@
                                     <action selector="audioSliderValueChanged:" destination="VqL-Uz-uB2" eventType="valueChanged" id="EAt-sk-jMV"/>
                                 </connections>
                             </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Said:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALG-4J-8XN">
+                                <rect key="frame" x="26" y="240" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOQ-fl-Izm">
+                                <rect key="frame" x="111" y="240" width="244" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -315,6 +325,7 @@
                         <outlet property="audioRemainLengthLabel" destination="oBE-nn-NsU" id="HpR-4h-7Ph"/>
                         <outlet property="audioSlider" destination="bLG-yc-l36" id="bq7-xI-dac"/>
                         <outlet property="playPauseBtn" destination="59R-pI-3Tw" id="yFx-Ni-yTW"/>
+                        <outlet property="voiceRecog" destination="TOQ-fl-Izm" id="niO-AL-rAY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vP7-Tv-vPu" userLabel="First Responder" sceneMemberID="firstResponder"/>

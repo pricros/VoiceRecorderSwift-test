@@ -17,6 +17,7 @@ class AudioPlayerViewController: UIViewController {
     @IBOutlet weak var audioLengthLabel : UILabel!
     @IBOutlet weak var audioRemainLengthLabel : UILabel!
     @IBOutlet weak var audioNameLabel : UILabel!
+    @IBOutlet weak var voiceRecog: UILabel!
     @IBOutlet weak var playPauseBtn : UIButton!
     
     lazy var directoryURL : NSURL = {
@@ -249,7 +250,7 @@ class AudioPlayerViewController: UIViewController {
             
             let hmm = (modelPath as NSString).stringByAppendingPathComponent("en-us")
             let lm = (modelPath as NSString).stringByAppendingPathComponent("en-us.lm.dmp")
-            let dict = (modelPath as NSString).stringByAppendingPathComponent("cmudict-en-us.dict")
+            let dict = (modelPath as NSString).stringByAppendingPathComponent("small.dict")
             
             if let config = Config(args: ("-hmm", hmm), ("-lm", lm), ("-dict", dict)) {
                 if let decoder = Decoder(config:config) {
@@ -261,6 +262,7 @@ class AudioPlayerViewController: UIViewController {
                             
                             print("Text: \(hyp.text) - Score: \(hyp.score)")
                             print(hyp.text == "Return", "Pass")
+                            self.voiceRecog.text = hyp.text
                             
                         } else {
                             print("Fail to decode audio")
